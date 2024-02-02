@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --bg-color: linear-gradient(
+    117deg,
+    rgba(104, 8, 135, 1) 61%,
+    rgba(106, 0, 255, 1) 100%
+  );
+  --field-color: #edeef0;
+  --supporting-color: #f4f4f4;
+  --btn-color: #ff5945;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Baloo 2", sans-serif; */
+  /* font-family: "Jost", sans-serif; */
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background-image: url(/assets/images/itachi.jpeg);
+  background-size: cover;
+}
+
+.todoApp {
+  width: 100%;
+  max-width: 540px;
+  background-color: var(--supporting-color);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.todoApp h2 {
+  display: flex;
+  align-items: center;
+  color: #002765;
+  margin-bottom: 2rem;
+
+  & img {
+    width: 30px;
+    margin-left: 10px;
+  }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--field-color);
+  padding-left: 20px;
+  margin-bottom: 25px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  padding: 16px 50px;
+  border: none;
+  outline: none;
+  background: var(--btn-color);
+  color: var(--supporting-color);
+  cursor: pointer;
+  font-size: 1rem;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+ul li {
+  padding: 15px 20px 15px 50px;
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(/assets/images/unchecked.png);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  top: 14px;
+  left: 8px;
+}
+
+ul li.active {
+  text-decoration: line-through;
+  color: #414141;
+}
+
+ul li.active::before {
+  background-image: url(/assets/images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  font-size: 28px;
+  top: 12px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--btn-color);
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="./assets/images/apple-touch-icon.png"
+      sizes="76x76"
+      href="/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todoApp">
+        <h2>
+          ToDo List <img src="./assets//images/icon.png" alt="todoApp-icon" />
+        </h2>
+        <div class="field">
+          <input
+            type="text"
+            placeholder="Add Your Task"
+            autocomplete="off"
+            id="input-field"
+          />
+          <button type="submit" onclick="addTask()">Add</button>
+        </div>
+
+        <ul class="taskList"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
